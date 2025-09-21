@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 
-export default function NotFound(){
+export default function NotFound() {
     return (
         <div className="text-center py-20">
             <h1 className="text-3xl font-semibold mb-2">Página no encontrada</h1>
