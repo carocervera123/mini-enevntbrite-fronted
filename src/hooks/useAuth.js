@@ -25,12 +25,11 @@ const useAuth = create(
 
             loadMe: async () => {
                 const res = await api.me()
-                if (res?.user) set({ user: res?.user })
+                if (res?.user) set({ user: res.user })
                 return res
             },
 
-            logout: () => ({ token: null, refreshToken: null, user: null }),
-
+            logout: () => set({ token: null, refreshToken: null, user: null }),
         }),
         {
             name: 'quickpass-auth',

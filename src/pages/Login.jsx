@@ -1,8 +1,8 @@
-import { useState } from "react"
-import { useLocation, useNavigate, Link } from "react-router-dom"
-import Button from "../components/Button"
-import Card from "../components/Card"
-import useAuth from "../hooks/useAuth"
+import { useState } from 'react'
+import { useLocation, useNavigate, Link } from 'react-router-dom'
+import Button from '../components/Button'
+import Card from '../components/Card'
+import useAuth from '../hooks/useAuth'
 
 export default function Login() {
     const [email, setEmail] = useState('')
@@ -15,6 +15,7 @@ export default function Login() {
     const from = location.state?.from?.pathname || '/events'
 
     const onSubmit = async (e) => {
+
         e.preventDefault()
         setLoading(true); setError(null)
         try { await login({ email, password }); navigate(from, { replace: true }) }
@@ -23,10 +24,10 @@ export default function Login() {
     }
 
     return (
-        <div className="mas-w-md mx-auto">
+        <div className="max-w-md mx-auto">
             <Card>
                 <h1 className="text-2xl font-semibold mb-2">Bienvenido a {import.meta.env.VITE_APP_NAME || 'la plataforma'}</h1>
-                <p className="opacity-80 mb-6">Tu sesión permanecera activa tras recargar.</p>
+                <p className="opacity-80 mb-6">Tu sesión permanece activa tras recargar.</p>
 
                 <form onSubmit={onSubmit} className="space-y-4">
                     <div>
