@@ -13,7 +13,6 @@ export default function Register() {
 
     const onChange = (e) => setForm({ ...form, [e.target.name]: e.target.value })
 
-
     const onSubmit = async (e) => {
         e.preventDefault()
         setLoading(true); setError(null)

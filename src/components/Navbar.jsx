@@ -22,6 +22,7 @@ export default function Navbar() {
                     {isAuthenticated() && hasRole('organizer', 'staff', 'admin') && (
                         <Link to="/scan" className="btn btn-primary">Escanear</Link>
                     )}
+
                     {isAuthenticated() ? (
                         <>
                             <span className="text-sm opacity-80">Hola, {user?.name || user?.email}</span>

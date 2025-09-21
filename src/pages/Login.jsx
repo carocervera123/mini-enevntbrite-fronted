@@ -15,7 +15,6 @@ export default function Login() {
     const from = location.state?.from?.pathname || '/events'
 
     const onSubmit = async (e) => {
-
         e.preventDefault()
         setLoading(true); setError(null)
         try { await login({ email, password }); navigate(from, { replace: true }) }
