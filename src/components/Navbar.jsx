@@ -1,7 +1,7 @@
-import { useNavigate, Link } from "react-router-dom"
-import useAuth from "../hooks/useAuth"
+import { Link, useNavigate } from 'react-router-dom'
+import useAuth from '../hooks/useAuth'
 
-export default function Navbar(){
+export default function Navbar() {
     const { isAuthenticated, user, logout } = useAuth()
     const navigate = useNavigate()
     const hasRole = (...roles) => roles.includes(user?.role)
@@ -13,6 +13,7 @@ export default function Navbar(){
                 </Link>
 
                 <nav className="flex items-center gap-3">
+
 
                     {isAuthenticated() ? (
                         <>
